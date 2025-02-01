@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 @layer utilities {
   .clip-hexagon {
     clip-path: polygon(100% 0, 100% 100%, 0 0);
@@ -83,5 +85,31 @@
   }
   .element {
     box-shadow: 0px 16px 64px 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@layer components {
+  .custom-pagination-success-stories {
+    @apply  flex justify-end space-x-2 mt-20;
+  }
+
+  .custom-pagination-success-stories .swiper-pagination-bullet {
+    @apply size-4 rounded-none bg-primaryBlack opacity-100 cursor-pointer transition-all duration-300;
+  }
+
+  .custom-pagination-success-stories .swiper-pagination-bullet-active {
+    @apply bg-white ;
+  }
+
+  .custom-pagination-latest-update {
+    @apply  flex justify-end space-x-2 mt-20;
+  }
+
+  .custom-pagination-latest-update .swiper-pagination-bullet {
+    @apply size-4 rounded-none bg-white opacity-100 cursor-pointer transition-all duration-300;
+  }
+
+  .custom-pagination-latest-update .swiper-pagination-bullet-active {
+    @apply bg-primary ;
   }
 }
