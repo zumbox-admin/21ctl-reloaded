@@ -53,7 +53,7 @@ const LatestUpdate = () => {
             <h2 className="text-white">Stay Ahead with the Latest Updates</h2>
             <p className="text-white">Discover thought leadership articles, company news, and industry trends:</p>
         </div>
-        <div className='mt-20 '>
+        <div className='mt-20 pb-10'>
       <Swiper
         slidesPerView={2}
         spaceBetween={30}
