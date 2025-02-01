@@ -74,7 +74,7 @@ const LatestUpdate = () => {
         pagination={{ el: '.custom-pagination-latest-update', clickable: true }}
         loop={true}
         autoplay = {{
-          delay:8000,
+          delay:5000,
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper "
