@@ -9,19 +9,22 @@ const Button = ({
   className,
   polycolor,
   action,
+  defaultFontStyle = false
 }: {
   cta: string | ReactNode;
   link?: string;
   className?: string;
   polycolor?: string;
+  defaultFontStyle?: boolean
   action?: () => void;
 }) => {
   return (
     <button onClick={action ? () => action() : undefined}>
       <div
         className={cn(
-          'relative bg-primary text-primaryBlack font-neuebold myFlex justify-center px-4 w-fit h-[43px]',
-          className
+          'relative bg-primary myFlex justify-center px-4 w-fit h-[43px]',
+          !defaultFontStyle ? "text-primaryBlack font-neuebold" : "",
+          className,
         )}
       >
         {/* Cut Corner */}
