@@ -29,20 +29,19 @@ const LatestUpdateSlider = [
         buttonStyle:"bg-[#02A4EE] px-10  font-bold"
     },
     {
-        title: "How Renewable Energy is Reshaping the Power Sector.",
-        smallText: "Explore Konet Tools",
-        buttonText: "Konet",
-        alternateColor:"bg-cerise-lighter",
-        buttonStyle:"bg-cerise-light px-10  font-bold"
-    },
+      title: "How Renewable Energy is Reshaping the Power Sector.",
+      smallText: "Explore Konet Tools",
+      buttonText: "Konet",
+      alternateColor:"bg-cerise-lighter",
+      buttonStyle:"bg-cerise-light px-10  font-bold"
+  },
     {
-        title: "How Renewable Energy is Reshaping the Power Sector.",
-        smallText: "Explore Konet Tools",
-        buttonText: "Konet",
-        alternateColor:"bg-curiousBlue",
-        buttonStyle:"bg-cerise-light px-10  font-bold"
-    },
-    
+      title: "AI Super Cloud: The Future of Data Processing.",
+      smallText: "Discover KonetPay",
+      buttonText: "Payment",
+      alternateColor:"bg-curiousBlue",
+      buttonStyle:"bg-[#02A4EE] px-10  font-bold"
+  },
 ]
 
 const LatestUpdate = () => {
@@ -60,7 +59,7 @@ const LatestUpdate = () => {
         pagination={{ el: '.custom-pagination-latest-update', clickable: true }}
         loop={true}
         autoplay = {{
-          delay:5000,
+          delay:8000,
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper "
