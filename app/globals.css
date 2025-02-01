@@ -102,7 +102,7 @@
   }
 
   .custom-pagination-latest-update {
-    @apply  flex justify-end space-x-2 mt-20;
+    @apply  space-x-2 ;
   }
 
   .custom-pagination-latest-update .swiper-pagination-bullet {

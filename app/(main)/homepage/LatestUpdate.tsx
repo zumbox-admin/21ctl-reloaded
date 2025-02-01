@@ -44,15 +44,30 @@ const LatestUpdateSlider = [
   },
 ]
 
+import { useState, useEffect } from 'react';
+import { cn } from '@/lib/utils';
+
 const LatestUpdate = () => {
+  const [isHidden, setHidden] =  useState(false)
+  useEffect(() => {
+   const timer = setTimeout(() => {
+      setHidden(true)
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [isHidden])
   return ( 
-    <section className="bg-primaryBlack min-h-[1050px] mt-20 w-full myContainer relative">
-        <div className="space-y-2 mt-20">
+    <section className="bg-primaryBlack min-h-[1050px] mt-20 w-full myContainer">
+      <div className='flex justify-between space-y-2 mt-20'>
+        <div className="">
             <p className="text-white text-sm  font-bold">News & Insights</p>
             <h2 className="text-white">Stay Ahead with the Latest Updates</h2>
             <p className="text-white">Discover thought leadership articles, company news, and industry trends:</p>
         </div>
-        <div className='mt-20 pb-10'>
+        <div className={cn(!isHidden ? "hidden" : "block" ,"custom-pagination-latest-update")}></div>
+      </div>
+        <div className='mt-20 pb-10 relative'>
+
       <Swiper
         slidesPerView={2}
         spaceBetween={30}
@@ -73,7 +88,6 @@ const LatestUpdate = () => {
         }
       </Swiper>
        {/* Custom Pagination */}
-       <div className="custom-pagination-latest-update mt-4 flex space-x-2 absolute right-20 top-40"></div>
        <div className='mt-16'>
        <Button cta={"Read More Success Stories"} polycolor='bg-primaryBlack' className='bg-primary'/>
        </div>
